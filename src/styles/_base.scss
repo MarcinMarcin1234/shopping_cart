@@ -1,0 +1,109 @@
+
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 62.5%;
+    line-height: 1.7;
+    color: #777;
+    height: 1000px;
+}
+
+.main-btn{
+    
+    &--medium{
+        cursor: pointer;
+        padding: 7px 30px;
+        background-color: #eb34d8;
+        border-radius: 30px;
+        color: #fff !important;
+        font-size: 1.4em;
+        box-shadow: 0 2px 4px rgba(0,0,0,.2);
+
+        &:hover{
+            transform: translateY(1.5px);
+            box-shadow: 0 3px 7px rgba(0,0,0,.2);
+        }
+
+        &:active{
+            box-shadow: none;
+        }
+    }
+}
+
+.product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65vh;
+    position: relative;
+
+    &--img{
+        position: absolute;
+        max-height: 50vh;
+        border-radius: 5px;
+        box-shadow: 0 3px 6px rgba(0,0,0,.2);
+        transition: all 1s ease-in-out;
+    }
+}
+
+.container__img{
+    overflow: hidden;
+    border-radius: 4px;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,.2);
+
+    &--img{
+        object-fit: cover;
+        padding: 10px;
+        border-radius: 4px;
+        z-index: -1;
+    }
+
+    .overlay{
+        i{
+            display: none;
+        }
+    }
+
+    &:hover{
+
+        .container__img--img{
+            transform: scale(1.1);
+            transition: all .5s ease-out;
+            -webkit-transition: all .5s ease-out;
+        }
+
+        .overlay{
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,.5);
+                position: absolute;
+                content: "";
+                top: 0;
+                left: 0;
+                z-index: 4 !important;
+
+            i{
+                position: absolute;
+                color: #fff;
+                display: block;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                z-index: 5 !important;
+            }
+        }
+    }
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+}

@@ -1,0 +1,7 @@
+export const ADD = 'ADD'
+export const REMOVE_ONE = 'REMOVE_ONE'
+export const REMOVE_ALL = 'REMOVE_ALL'
+export const CLEAR_CART = 'CLEAR_CART'
+export const GET_PRODUCTS = 'GET_PRODUCTS'
+export const SELECT_PRODUCT = 'SELECT_PRODUCT'
+export const ADD_MAAT = 'ADD_MAAT'
